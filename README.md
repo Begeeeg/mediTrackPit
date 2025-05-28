@@ -7,9 +7,15 @@ By leveraging modern technology, the system aims to enhance stock tracking, prev
 Before using this code, follow these steps:
 
 1. Install XAMPP – This will set up a local server environment on your computer, including Apache and PhpMyAdmin (a tool for managing databases).
+
 2. Open XAMPP and start Apache and MySQL.
+
 3. Create a database:
+   
   Open your web browser and go to http://localhost/phpmyadmin.
+  
   Click on "New" in the left sidebar.
+  
   Enter a name for your database (esp32_db) and click "Create".
+  
 Once you've done this, your database will be ready to connect with your PHP code.
