@@ -1,0 +1,132 @@
+/* Stylesheet for MediTrack frontend */
+
+/* Define color variables for consistent theming */
+:root {
+  --priCal: rgb(255, 255, 255); /* Primary color */
+  --secCol: rgb(0, 100, 255); /* Secondary color */
+  --thiCol: rgb(192, 192, 192); /* Tertiary color */
+  --forCol: rgb(165, 100, 42); /* Fourth color */
+  --textColorOne: #000000; /* Primary text color */
+  --textColorTwo: #ffffff; /* Secondary text color */
+}
+
+/* Set height for the entire document */
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+/* General body styling */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif; /* Use Roboto font */
+  background-image: url("image/background.jpg"); /* Background image */
+  background-size: cover; /* Cover the entire background */
+  font-size: small;
+  text-align: justify;
+  padding-bottom: 50px; /* Add padding to prevent overlap with the footer */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Styling for the main container */
+.container0 {
+  margin: 20px auto; /* Center the container with vertical spacing */
+  width: 80%;
+  background: var(--thiCol); /* Use tertiary color */
+  padding: 20px;
+  border-radius: 20px; /* Rounded corners */
+  text-align: center;
+  position: relative; /* Remove absolute positioning */
+  transform: none; /* Remove transform property */
+  top: 0; /* Reset top property */
+  left: 0; /* Reset left property */
+}
+
+/* Styling for the logo */
+#logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the image inside the logo */
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%; /* Circular shape */
+}
+
+/* Styling for the footer */
+.footer {
+  background-color: var(--secCol); /* Use secondary color */
+  color: var(--textColorTwo); /* Use secondary text color */
+  text-align: center;
+  padding: 10px;
+  position: relative; /* Change position to relative to avoid overlap */
+  bottom: 0;
+  width: 100%;
+}
+
+.profiles {
+  display: block; /* Stack profiles vertically */
+  gap: 0; /* Remove space between profiles */
+}
+
+.profile {
+  margin: 20px auto; /* Center each profile and add vertical spacing */
+  max-width: 300px; /* Keep the maximum width */
+  padding: 15px;
+  background: var(--priCal); /* Use primary color */
+  border: 1px solid var(--secCol); /* Border with secondary color */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center-align content */
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure the image fits within the circle */
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  margin: 10px 0 5px;
+  color: var(--secCol); /* Use secondary color for headings */
+}
+
+.profile p {
+  margin: 5px 0;
+  color: var(--textColorOne); /* Use primary text color */
+}
+
+.profile a {
+  color: var(--forCol); /* Use fourth color for links */
+  text-decoration: none;
+}
+
+.profile a:hover {
+  text-decoration: underline;
+}

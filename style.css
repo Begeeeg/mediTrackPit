@@ -1,0 +1,134 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  justify-content: justify;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(to right, rgb(55, 0, 255), rgb(225, 0, 255));
+}
+
+.container {
+  width: 300px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 35px rgb(0, 0, 0);
+}
+
+form {
+  margin: 0;
+}
+
+.formTitle {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  padding-left: 30px;
+  font-size: 20px;
+  width: 200px;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup img {
+  position: absolute;
+}
+
+input:focus {
+  background-color: transparent;
+  outline: transparent;
+  border-bottom: 2px solid rgb(50, 0, 255);
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+label {
+  color: rgb(117, 117, 117);
+  position: relative;
+  left: 30px;
+  top: -25px;
+  cursor: auto;
+  transition: 0.5 ease all;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -45px;
+  font-size: 10px;
+  left: 0px;
+  color: rgb(138, 43, 226);
+  transition: 0.3s ease all;
+}
+
+#submitSignIn,
+#submitSignUp {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  background: rgb(138, 43, 226);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#submitSignIn:hover,
+#submitSignUp:hover {
+  background: rgb(138, 0, 226);
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+}
+
+#signInButton,
+#signUpButton {
+  border: none;
+  background-color: transparent;
+  color: rgb(138, 50, 226);
+}
+
+#signInButton:hover,
+#signUpButton:hover {
+  text-decoration: underline;
+  color: rgb(138, 0, 226);
+  cursor: pointer;
+}

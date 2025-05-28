@@ -1,0 +1,309 @@
+/* Stylesheet for MediTrack frontend */
+
+/* Define color variables for consistent theming */
+:root {
+  --priCal: rgb(255, 255, 255); /* Primary color */
+  --secCol: rgb(0, 100, 255); /* Secondary color */
+  --thiCol: rgba(192, 192, 192, 0.75); /* Tertiary color */
+  --forCol: rgb(165, 100, 42); /* Fourth color */
+  --textColorOne: #000000; /* Primary text color */
+  --textColorTwo: #ffffff; /* Secondary text color */
+}
+
+/* Set height for the entire document */
+html,
+body {
+  height: 100%;
+}
+
+/* General body styling */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif; /* Use Roboto font */
+  background-image: url("image/background.jpg"); /* Background image */
+  background-size: cover; /* Cover the entire background */
+  font-size: small;
+  text-align: justify;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Styling for the header */
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  background-color: var(--secCol);
+}
+
+/* Styling for the logo */
+#logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the image inside the logo */
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%; /* Circular shape */
+}
+
+#title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--textColorTwo); /* Use secondary text color */
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Center the title */
+}
+
+/* Styling for action buttons */
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  text-align: center;
+  gap: 15px;
+}
+
+/* Styling for individual action buttons */
+.actionButton {
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  cursor: pointer; /* Pointer cursor */
+  text-align: center;
+}
+
+.actionButton img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular shape */
+}
+
+.actionButton:hover {
+  background-color: var(--forCol); /* Change background on hover */
+}
+
+/* Styling for the search bar */
+.search-bar {
+  margin: 10px 0;
+  border-radius: 10%;
+  text-align: center;
+}
+
+/* Styling for the search input */
+#searchInput {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid var(--secCol); /* Border with secondary color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px;
+}
+
+/* Styling for the search button */
+#searchButton {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: var(--secCol); /* Use secondary color */
+  color: var(--textColorTwo); /* Use secondary text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 14px;
+}
+
+#searchButton:hover {
+  background-color: var(--forCol); /* Change background on hover */
+}
+
+/* Styling for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styling for the dropdown button */
+.dropdownButton {
+  background-color: var(--secCol); /* Use secondary color */
+  color: var(--textColorTwo); /* Use secondary text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Styling for the dropdown content */
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: var(--thiCol); /* Use tertiary color */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  z-index: 1;
+  border-radius: 5px; /* Rounded corners */
+  max-width: 100%; /* Prevents horizontal overflow */
+  max-height: 300px; /* Limits vertical size */
+  overflow-y: auto; /* Adds scroll if content exceeds max-height */
+  right: 0; /* Aligns dropdown to the right edge of the parent */
+  left: auto; /* Ensures it doesn't overflow to the left */
+}
+
+/* Styling for action buttons inside the dropdown */
+.dropdownContent .actionButton {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: var(--textColorOne); /* Use primary text color */
+}
+
+.dropdownContent .actionButton:hover {
+  background-color: var(--secCol); /* Change background on hover */
+  color: var(--textColorTwo); /* Change text color on hover */
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.container1 {
+  width: 100%;
+  height: 100%;
+  background: var(--thiCol); /* Use tertiary color */
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Styling for the medical records section */
+#medRec {
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Styling for the records container */
+#recordsContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styling for individual record boxes */
+.record-box {
+  background: var(--thiCol); /* Use tertiary color */
+  border: 1px solid var(--secCol); /* Border with secondary color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Styling for record box titles */
+.record-box h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: var(--textColorOne); /* Use primary text color */
+}
+
+/* Styling for record box paragraphs */
+.record-box p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: var(--textColorOne); /* Use primary text color */
+}
+
+/* Styling for update and delete buttons */
+.updateButton,
+.deleteButton {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Styling for the update button */
+.updateButton {
+  background-color: var(--secCol); /* Use secondary color */
+  color: var(--textColorTwo); /* Use secondary text color */
+}
+
+.updateButton:hover {
+  background-color: var(--forCol); /* Change background on hover */
+}
+
+/* Styling for the delete button */
+.deleteButton {
+  background-color: red;
+  color: var(--textColorTwo); /* Use secondary text color */
+}
+
+.deleteButton:hover {
+  background-color: darkred; /* Change background on hover */
+}
+
+/* Styling for record images */
+.record-image {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 0;
+  object-fit: cover; /* Cover the entire container */
+}
+
+/* Styling for the add button */
+.addButton {
+  background: var(--thiCol); /* Use tertiary color */
+  border: 1px solid var(--secCol); /* Border with secondary color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.addButton:hover {
+  background: var(--secCol); /* Change background on hover */
+  color: var(--textColorTwo); /* Change text color on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling for the inventory section */
+.inventory {
+  text-align: center;
+  margin: 10px;
+}
+
+.record {
+  border: 1px solid #000000; /* Light gray border */
+  padding: 10px; /* Add some padding inside the record */
+  margin: 10px 0; /* Add some space between records */
+  border-radius: 5px; /* Optional: rounded corners */
+}
